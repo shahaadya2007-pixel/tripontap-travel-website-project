@@ -34,38 +34,38 @@
       </section>
 
       <section class="contact_form_section">
-       <form action="yourtrips.html"  method="get" class="contact_form">
+       <form action="yourtrips.html"  method="get" class="contact_form" id="bookingForm">
         <fieldset>
             <legend>Contact Us</legend>
              <p><label>
                 Name:
-                <input type="text" name="name" required>
+                <input type="text" id="name"  name="name" required>
             </label></p>
 
            <p> <label>
                 Email:
-                <input type="email" name="email" required>
+                <input type="email"  id="email"name="email" required>
             </label></p>
             
            <p> <label for="phone">Phone:
-    <input type="tel" name="phone" id="phone" placeholder="55-5555-5555"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ></p></label>
+    <input type="tel" name="phone" id="phone" placeholder="55-5555-5555"  ></p></label>
             
             
-    <p> <label>
+    <p> <label for="destination">
         Select Destination:
-        <select name="destination" required>
+        <select name="destination"id="destination" required>
             <option value="">--Choose a Destination--</option>
-            <option value="Transylvania">Transylvania</option>
-            <option value="Nocturne Highlands">Nocturne Highlands</option>
-            <option value="Ravencrest Village">Ravencrest Village</option>
-            <option value="Vale of the Carpathians">Vale of the Carpathians</option>
+            <option value="moonlit">Transylvania</option>
+            <option value="nocturne">Nocturne Highlands</option>
+            <option value="ravencrest">Ravencrest Village</option>
+            <option value="autumn">Vale of the Carpathians</option>
         </select>
     </label></p>
 
     <p>
-    <label>
+    <label for="payment">
     Payment Method:
-        <select name="payment" required>
+        <select name="payment" id="payment" required>
             <option value="">-- Select Payment Method --</option>
             <option value="Credit Card">Credit Card</option>
             <option value="Debit Card">Debit Card</option>
@@ -82,8 +82,11 @@
     <textarea name= "message"id= "message"cols="30" rows="5" placeholder="Type your msg here....."></textarea>
      </p></label>
 
-            <button type="submit">Send Query</button>
+            <button >Send Query</button>
             <button type="submit">Book now</button>
+             <div class="loader" id="loader"></div>
+
+            <p id="bookingStatus" class="status_message"></p>
              </fieldset>
     </form>
      </main>
@@ -101,5 +104,6 @@
         </p>
     </div>
     </footer>
+    <script src="js/script.js"></script>
       </body>
      </html>
